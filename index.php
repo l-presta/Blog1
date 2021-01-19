@@ -10,6 +10,7 @@
   <a href="articoli.php">ARTICOLI</a>
   <a href="insert_post.php">Inserisci articolo</a>
 </div>
+
 <?php 
  @include "config.php";
 
@@ -19,16 +20,28 @@
  // estraiamo i dati relativi agli articoli dalla tabella
  $sql = "SELECT * FROM articoli ORDER BY art_data DESC";
  $query = @mysqli_query($db, $sql) or die (mysqli_error($db));
- ?>
+
+if(mysqli_num_rows($query) > 0){
+  // se la tabella contiene records mostriamo tutti gli articoli attraverso un ciclo
+  while($row = mysqli_fetch_array($query)){
+
+?>
+
+<div class="card-set">
+  <div class="card-deck">
+  <div class="container">
+    <div class="row">
+    
+        
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><?php echo "<h2>".$titolo."</h2>"; ?></h5>
-    <p class="card-text"><?php 
-
+    <p class="card-text"> 
+    <?php 
     //verifichiamo che siano presenti records
-    if(mysqli_num_rows($query) > 0){
+   // if(mysqli_num_rows($query) > 0){
       // se la tabella contiene records mostriamo tutti gli articoli attraverso un ciclo
-      while($row = mysqli_fetch_array($query)){
+    //  while($row = mysqli_fetch_array($query)){
         $art_id = $row['art_id'];
         $autore = stripslashes($row['art_autore']);
         $titolo = stripslashes($row['art_titolo']);
@@ -46,12 +59,16 @@
     echo "</br>";
     echo  " <a class=\"btn btn-primary\" href=\"articolo.php?id=$art_id\">Leggi tutto</a>";
     echo "<hr>";
-      }}
-  else
-    echo "<h1>Nessun articolo trovato</h1>"
-  
+    
   ?>
   </p>
   </div>
 </div>
+</div>
+</div>
+<?php
+}}
+  else
+    echo "<h1>Nessun articolo trovato</h1>"
+  ?>
 </body>
