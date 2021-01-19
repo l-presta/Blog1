@@ -1,8 +1,14 @@
 <html>
 <head>
 <title>Il mio Blog</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div class="container cyan brackets">
+  <a href="index.php">HOME</a>
+  <a href="articoli.php">ARTICOLI</a>
+  <a href="insert_post.php">Inserisci articolo</a>
+</div>
 <?
 // controlliamo che sia stato inviato un id numerico alla pagina
 if(isset($_GET['id'])&&(is_numeric($_GET['id']))){

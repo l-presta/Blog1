@@ -4,11 +4,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-<h1 style="text-align:center;">Lorenzo's Blog</h1>
+<h1><center>LISTA DEGLI ARTICOLI</center></h1>
 <div class="container cyan brackets">
   <a href="index.php">HOME</a>
   <a href="articoli.php">ARTICOLI</a>
   <a href="insert_post.php">Inserisci articolo</a>
+
 </div>
 <?php 
  @include "config.php";
@@ -20,8 +21,6 @@
  $sql = "SELECT * FROM articoli ORDER BY art_data DESC";
  $query = @mysqli_query($db, $sql) or die (mysqli_error($db));
  ?>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
     <h5 class="card-title"><?php echo "<h2>".$titolo."</h2>"; ?></h5>
     <p class="card-text"><?php 
 
@@ -51,7 +50,3 @@
     echo "<h1>Nessun articolo trovato</h1>"
   
   ?>
-  </p>
-  </div>
-</div>
-</body>

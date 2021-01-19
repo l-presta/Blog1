@@ -1,9 +1,15 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>Blog: Lorenzo's Blog</title>
 </head>
 <body>
 <h1>Inserisci un articolo</h1>
+<div class="container cyan brackets">
+  <a href="index.php">HOME</a>
+  <a href="articoli.php">ARTICOLI</a>
+  <a href="insert_post.php">Inserisci articolo</a>
+</div>
 <?
 
 //includiamo il file di configurazione
