@@ -2,8 +2,9 @@
 <head>
 <title>Blog: inserimento commenti</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color:#00bcd4;">
 <h1>Inserisci un tuo commento:</h1>
 <div class="container cyan brackets">
   <a href="index.php">HOME</a>
@@ -49,7 +50,8 @@ Autore:<br>
 Testo:<br>
 <textarea name="testo" cols="40" rows="10"></textarea><br>
 <input name="id" type="hidden" value="<? echo $com_art; ?>">
-<input name="submit" type="submit" value="Invia">
+    </br>
+<input class="btn btn-primary" name="submit" type="submit" value="Invia">
 </form>
       <?
       // se l'id dell'articolo non esiste o non è numerico inviamo delle notifiche

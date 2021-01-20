@@ -2,12 +2,13 @@
 <head>
 <title>Il mio Blog</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color:#00bcd4;">
 <div class="container cyan brackets">
   <a href="index.php">HOME</a>
   <a href="articoli.php">ARTICOLI</a>
-  <a href="insert_post.php">Inserisci articolo</a>
+  <a href="insert_post.php">INSERISCI ARTICOLO</a>
 </div>
 <?
 // controlliamo che sia stato inviato un id numerico alla pagina
@@ -31,10 +32,10 @@ if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
     echo "<h2>".$titolo."</h2>" . $articolo . "<br><br>";
     $data = preg_replace('/^(.{4})-(.{2})-(.{2})$/','$3-$2-$1', $data);
     echo "Scritto da <b>". $autore . "</b>";
-    echo "| Articolo postato il <b>" . $data . "</b>"; 
+    echo "| Articolo postato il <b>" . $data . "</b></br>"; 
   
     // link alla pagina dei commenti  
-    echo "<br><a href=\"insert_comment.php?id=$art_id\">Invia un commento</a><br><br>";
+    echo "</br> <a class=\"btn btn-primary\" href=\"insert_comment.php?id=$art_id\" >Invia un commento</a>";
 
     // visualizzianmo tutti i commenti
     $sql_com = "SELECT com_autore, com_testo FROM commenti WHERE com_art='$art_id'";
