@@ -166,4 +166,4 @@ if (mysqli_num_rows($query) > 0) {
   <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <!-- Footer -->
 
-  </html>   MYSQL_DATABASE: blog-db
+  </html> 
