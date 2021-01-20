@@ -11,6 +11,7 @@
   <a href="insert_post.php">INSERISCI ARTICOLO</a>
 </div>
 <?
+
 // controlliamo che sia stato inviato un id numerico alla pagina
 if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
   // valorizziamo la variabile relativa all'id dell'articolo e includiamo il file di configurazione
@@ -35,7 +36,7 @@ if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
     echo "| Articolo postato il <b>" . $data . "</b></br>"; 
   
     // link alla pagina dei commenti  
-    echo "</br> <a class=\"btn btn-primary\" href=\"insert_comment.php?id=$art_id\" >Invia un commento</a>";
+    echo "</br> <a class=\"btn btn-primary\" href=\"insert_comment.php?id=$art_id\" >Invia un commento</a> </br></br>";
 
     // visualizzianmo tutti i commenti
     $sql_com = "SELECT com_autore, com_testo FROM commenti WHERE com_art='$art_id'";
@@ -55,4 +56,11 @@ if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
   // se per l'id non esiste un articolo..
   echo "Nessun articolo trovato.";
 }
+
+$myArr = array($autore, $titolo, $data, $articolo);
+
+$myJSON = json_encode($myArr);
+
+echo $myJSON;
+
 ?>
