@@ -1,8 +1,8 @@
-# Complete-blog-php
-This Application is for blogging where users can blog and other can like, share these blog and all the blog have specific catagory mantain by admin.
+# Lorenzo's blog
+Lorenzo's blog is a simple blog script.
 
 ## Language used
-1. PHP, MySQL, Javascript, HTML, CSS, OOPs
+1. PHP, MySQL, Javascript, HTML, CSS
 
 ## Setup
 1. PHP 7.0 or above
@@ -13,8 +13,3 @@ This Application is for blogging where users can blog and other can like, share 
 6. Make a install of your application software.
 7. Done! Enjoy application.
 
-## Improvement Required
-1. Admin section.
-2. Code refactoring.
-3. UI.
-4. Profile section.
