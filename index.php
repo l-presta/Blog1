@@ -17,7 +17,7 @@ if (mysqli_num_rows($query) > 0) {
   </head>
 
   <body style="background-color:#00bcd4;">
-    <h1 style="text-align:center;">Lorenzo's Blog</h1>
+    <h1 style="text-align:center;">LORENZO'S BLOG</h1>
     <div class="container cyan brackets">
       <a href="index.php">HOME</a>
       <a href="articoli.php">ARTICOLI</a>
@@ -29,7 +29,6 @@ if (mysqli_num_rows($query) > 0) {
     ?>
       <div class="container">
         <div class="row">
-          <div class="col-6 col-md-3 col-lg-2">
             <div class="card">
               <div class="card-body">
                 <div class="card-title">
@@ -61,7 +60,6 @@ if (mysqli_num_rows($query) > 0) {
                     echo $sum2 = $tot['conta'];
                     echo  "</br> Articolo postato il <b>" . $data . "</b> </br>";
                     ?>
-                  </div>
                 </div>
               </div>
             </div>
