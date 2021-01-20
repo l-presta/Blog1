@@ -33,7 +33,8 @@ if(isset($_POST['submit'])){
   
   // se l'inserimento ha avuto successo inviamo una notifica
   if (@mysqli_query($db, $sql) or die (mysqli_error($db))){
-    echo "Commento inserito con successo.";
+    echo "Commento inserito con successo.<br><br>";
+    echo("<button class=\"btn btn-primary\" onclick=\"location.href='articolo.php?id=$com_art'\">Torna all'articolo</button>");
   } 
 }else{
   //controlliamo che l'id dell'articolo sia realamente esistente

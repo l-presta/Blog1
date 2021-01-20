@@ -7,6 +7,7 @@
 </head>
 
 <body style="background-color:#00bcd4;">
+<center><h1>ARTICOLO</h1></center>
   <div class="container cyan brackets">
     <a href="index.php">HOME</a>
     <a href="articoli.php">ARTICOLI</a>
@@ -35,6 +36,7 @@ if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
     $data = preg_replace('/^(.{4})-(.{2})-(.{2})$/','$3-$2-$1', $data);
     echo "Scritto da <b>". $autore . "</b>";
     echo "| Articolo postato il <b>" . $data . "</b></br>"; 
+    echo "id articolo: $art_id";
   
     // link alla pagina dei commenti  
     echo "</br> <a class=\"btn btn-primary\" href=\"insert_comment.php?id=$art_id\" >Invia un commento</a></br></br>";
