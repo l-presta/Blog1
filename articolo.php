@@ -40,7 +40,7 @@ if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
     echo "Scritto da <b>". $autore . "</b>";
     echo "| Articolo postato il <b>" . $data . "</b></br>"; 
     echo "id articolo: $art_id";
-  
+    // var_dump($titolo);
     // link alla pagina dei commenti  
     echo "</br> <a class=\"btn btn-primary\" href=\"insert_comment.php?id=$art_id\" >Invia un commento</a></br></br>";
 

@@ -8,7 +8,7 @@
 
 <body style="background-color:#00bcd4;">
   <center>
-    <h1>Inserisci un articolo</h1>
+    <h1>INSERISCI UN'ARTICOLO</h1>
   </center>
   <div class="container cyan brackets">
     <a href="index.php">HOME</a>

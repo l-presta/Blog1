@@ -5,6 +5,7 @@
 // estraiamo i dati relativi agli articoli dalla tabella
 $sql = "SELECT * FROM articoli ORDER BY art_data DESC";
 $query = @mysqli_query($db, $sql) or die(mysqli_error($db));
+//verifichiamo che siano presenti records
 if (mysqli_num_rows($query) > 0) {
 ?>
   <html>
@@ -33,10 +34,6 @@ if (mysqli_num_rows($query) > 0) {
               <div class="card-title">
                 <p class="card-text">
                   <?php
-                  //verifichiamo che siano presenti records
-                  // if(mysqli_num_rows($query) > 0){
-                  // se la tabella contiene records mostriamo tutti gli articoli attraverso un ciclo
-                  //  while($row = mysqli_fetch_array($query)){
                   $art_id = $row['art_id'];
                   $autore = stripslashes($row['art_autore']);
                   $titolo = stripslashes($row['art_titolo']);
