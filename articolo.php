@@ -7,13 +7,16 @@
 </head>
 
 <body style="background-color:#00bcd4;">
-<center><h1>ARTICOLO</h1></center>
+  <center>
+    <h1>ARTICOLO</h1>
+  </center>
   <div class="container cyan brackets">
     <a href="index.php">HOME</a>
     <a href="articoli.php">ARTICOLI</a>
     <a href="insert_post.php">INSERISCI ARTICOLO</a>
   </div>
-  <?
+  <center>
+    <?
 // controlliamo che sia stato inviato un id numerico alla pagina
 if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
   // valorizziamo la variabile relativa all'id dell'articolo e includiamo il file di configurazione
@@ -61,5 +64,29 @@ if(isset($_GET['id'])&&(is_numeric($_GET['id']))){
 }
 $myArr = array($autore, $titolo, $data, $articolo, $art_id);
 $myJSON = json_encode($myArr);
-echo $myJSON;
+// echo $myJSON;
 ?>
+  </center>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <button class="btn btn-primary" onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
